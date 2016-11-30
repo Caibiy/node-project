@@ -1,0 +1,22 @@
+<!-- views/pages/about.ejs-->
+<html>
+	<head>
+	<% include ../partials/head %>	
+	</head>
+	<body class="container">
+		<header>
+			<% include ../partials/header %>
+		</header>
+		<main>
+			<div class="ui grid container">
+				<div class="ui three column centered grid">
+					<% posts.forEach(function(post,index){ %>
+						<div class="column">
+							<div class="ui card"></div>
+						</div>
+					<% })%>
+				</div>
+			</div>
+		</main>
+	</body>
+</html>

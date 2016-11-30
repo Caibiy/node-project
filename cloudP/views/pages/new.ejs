@@ -1,0 +1,45 @@
+<!-- ./views/pages/new.ejs-->
+<html>
+	<head>
+		<!--Head Partial-->
+		<% include ../partials/head %>
+	</head>
+	<body class="container">
+		<header>
+			<% include ../partials/header %>
+		</header>
+		<main>
+			<div class="ui grid container">
+				<div class="ui two column centerd grid">
+					<div class="column">
+						<form action="/create" enctype="mulipart/form-data" class="ui form" method="post">
+							<div class="field">
+								<label >Title</label>
+								<input name="title" placeholder="Title" type="text">
+							</div>
+							<div class="field">
+								<label>Description</label>
+								<textarea name="description"   rows="4" placeholder="Description"></textarea>
+							</div>
+							<div class="field">
+								<label >Image</label>
+								<input type="file" name="image" class="upload_field">
+							</div>
+							<div class="thumbnails"></div>
+							<div class="ui teal progress">
+								<div class="bar"></div>
+							</div>
+							<button  id="upload_widget_opener" class="ui button" type="button">上传图片</button>
+							<button type="submit" class="ui primary button">
+								提交
+							</button>
+						</form>
+					</div>
+				</div>
+			</div>
+		</main>
+
+		<!--Script Partial-->
+		<% include ../partials/scripts %>
+	</body>
+</html>
